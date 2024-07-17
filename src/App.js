@@ -6,7 +6,7 @@ function App() {
   const [message, setMessage] = useState("")
 
   const fetchMessage = async () => {
-    const res = await fetch("http://localhost:8080/message")
+    const res = await fetch("https://go-for-backend.vercel.app/message")
     const messageObj = await res.json()
     setMessage(messageObj.message)
   }
