@@ -6,9 +6,9 @@ function App() {
   const [message, setMessage] = useState("")
 
   const fetchMessage = async () => {
-    const res = await fetch("https://go-for-backend.vercel.app/message")
-    const messageObj = await res.json()
-    setMessage(messageObj.message)
+    const res = await fetch("https://go-for-backend.vercel.app/")
+    const messageObj = await res.text()
+    setMessage(messageObj)
   }
 
   useEffect(() => {
@@ -16,7 +16,7 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <div className="App"> 
       <p>{message}</p>
     </div>
   );
